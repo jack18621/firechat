@@ -1,0 +1,25 @@
+<!-- <ul>
+  <li class="text" *ngFor="let chat of chats | async">
+    {{chat.mensaje}}
+  </li>
+</ul> -->
+<style>
+.alert{
+    width: 50%
+}
+
+</style>
+<h1>Chat</h1>
+<hr>
+<!-- class="alert alert-primary mt-1" role="alert" -->
+<div class="app-mensajes" id="app-mensajes">
+        <div *ngFor="let chat of chat.chats" class="text-right">
+            <span class="badge badge-primary">Juan</span>
+            <div>
+                   {{chat.mensaje}}
+                  </div>
+        </div>
+        
+</div>
+
+<input type="text" class="form-control mb-5px"  name="mensaje" [(ngModel)]="mensaje" placeholder="Enviar Mensaje" (keyup.enter)="enviarMensaje()">
